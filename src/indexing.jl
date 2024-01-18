@@ -511,7 +511,7 @@ known_step(@nospecialize T::Type{<:AbstractUnitRange}) = 1
 Returns `static(true)` if `T` is a type that splats across multiple dimensions.
 """
 is_splat_index(T::Type) = false
-is_splat_index(@nospecialize(x)) = is_splat_index(typeof(x))
+is_splat_index(x) = is_splat_index(typeof(x))
 
-_add1(@nospecialize x) = x + oneunit(x)
-_sub1(@nospecialize x) = x - oneunit(x)
+_add1(x) = x + oneunit(x)
+_sub1(x) = x - oneunit(x)
